@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Lección 13</title>
+</head>
+<body>
+	<h1 align="center">Formulario de datos</h1>
+	<form action="" align="center">
+
+	 <!-- <div>
+        <label for="nombres">Nombres:</label><br>
+        <input type="text" name="nombres" pattern="[A-Za-z/]{1,}" required>
+      </div><br> -->
+      
+		<p><label>Nombres:<br><input type="text" id="nombre" required></label></p>
+		<p><label>Apellidos:<br><input type="text" id="apellido" required></label></p>
+		<!-- Para utilizar el atributo pattern es recomendable utilizar el atributo type="text" -->
+		<p><label>Teléfono:<br><input type="text" id="telefono" pattern="^[9]\d{8}$" title="Ingrese un número de celular válido"required></p>
+		<!-- Pattern: Quiere decir que el número COMENZARÁ por 9 y que contendrá 9 digitos -->
+		<div>
+			<label>Seleccione un carro para continuar: </label><br><br>
+			<select name="carros" id="carros" required>
+          		<option value="">Escoge tu carro</option>
+          		<option value="volvo">Volvo</option>
+          		<option value="saab">Saab</option>
+          		<option value="mercedes">Mercedes</option>
+          		<option value="audi">Audi</option>
+        	</select>
+        </div><br>
+		<p><label>Email:<br><input type="email" id="email" required></label></p>
+		<p><label>Crea tu contraseña:<br><input type="password" id="password" pattern=".{6,}" title="six or more characters" required></label></p>
+		<button type="submit" required>Enviar datos</button>
+	</form>
+</body>
+</html>
